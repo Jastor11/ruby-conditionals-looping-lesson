@@ -1,0 +1,145 @@
+# Hey! Welcome back. Wanted to throw out some words of advice
+
+# as a heads up...
+
+# there are a few words that are not allowed to be used when naming variables
+# they include things like true, false, puts, gets, and, break, class, nil
+# if, do, else, end, for, or, not, while, and others.
+
+# we actually use these key words in our ruby code
+# sometimes, we'll want to store booleans in variables
+
+# let's make a new variable called i_am_a_huge_geek and set that equal to true
+
+i_am_a_huge_geek = true
+
+# or
+
+every_kid_loves_school = false
+
+# boolean data types are great for tell your code to do something or not
+
+# now, we're about to throw up a big chunk of code 
+# don't worry if you don't get it right away - this stuff takes repitition
+# and it will come to you in time - so just bare with me for a second here
+
+# we write out boolean conditions as so:
+
+if (i_am_a_huge_geek == true)
+  # do something here if it's true
+else
+  # do something else here if it's false
+end
+
+# if some condition do one things, otherwise do something else
+
+# notice how inside the parenthesis, our conditions is using double equals signs
+
+# students sometimes mess up using one equal sign to assign a value to a variable
+# and using two equal signs to check if something is true or false
+
+if (i_am_a_huge_geek == true)
+  puts "Revenge of the nerds!!!11!1one!"
+else
+  # do something else here if it's false
+  puts "This condition was false."
+end
+
+# ruby can also figure out conditions for us, and do something
+# based on the condition - like this:
+
+if (my_new_gpa > 3.5) 
+  puts "Momma and poppa Astor are in a good mood."
+else
+  puts "Time to get my study on!"
+end
+
+# and you can do all kinds of other stuff that we'll get into over the next
+# couple of days
+
+# one mixup that happens for a lot of new students is
+# not remembering when to use quotations for strings, 
+# or plain text for variables and booleans
+
+# here's a simple little cheat sheet to help remember
+
+my_variable = "this sentence is a string being assigned to the my_variable variable"
+surround_false_with_quotes = false
+true_is_a_boolean_data_type = true
+this_string_just_prints_the_word_true = "true"
+
+# notice the difference between usage of key words vs strings
+
+# in ruby, everything is either truthy or falsey
+
+# we can check for truthiness or equality in ruby
+first = 1 > 2 # falsey
+second = 4 == 4 # truthy
+third = "greatness" == "greatness" # truthy
+fourth = "Yay" == "yay" # falsey
+fifth = true # truthy
+sixth = false # falsey
+happy = true
+absence_of_anything = nil # falsey
+
+and_operator = true && nil # 
+or_operator = false || happy # 
+
+def is_condition_truthy(condition)
+	if condition #if condition evaluates to true!
+		 "This answer is truthy!"
+	else # otherwise it evaluates to false
+		 "This answer is falsey!"
+	end
+end
+
+is_condition_truthy(first)
+is_condition_truthy(second)
+is_condition_truthy(third)
+is_condition_truthy(fourth)
+is_condition_truthy(fifth)
+is_condition_truthy(sixth)
+is_condition_truthy(happy)
+is_condition_truthy(nil)
+is_condition_truthy("wierdness")
+
+is_condition_truthy(and_operator)
+is_condition_truthy(or_operator)
+
+
+ counter = 0
+10.times do
+	counter = counter + 1
+	puts "#{counter}. Hey Jeff."
+end
+
+counter = 0
+while counter <= 1000
+	puts counter
+	counter = counter + 1
+end
+
+# # Jeff loves to eat
+calories_consumed = 0
+calories_needed_for_jeff_to_be_full = 10000
+is_jeff_full = false
+calories_in_bag_of_chocolate_pretzels = 290
+
+# #looping
+# 10.times do
+# 	calories_consumed += 290 #calories in the chocolate pretzels
+# 	puts "Jeff has now eaten #{calories_consumed} calories."
+# 	if calories_consumed > calories_needed_for_jeff_to_be_full
+# 		is_jeff_full = true # data type - boolean
+# 		puts "Is Jeff full? #{is_jeff_full.to_s.capitalize}!"
+# 	end
+# end
+
+while is_jeff_full == false
+	calories_consumed = calories_consumed + 290
+	#puts "Jeff has now eaten #{calories_consumed} calories."
+	if calories_consumed > calories_needed_for_jeff_to_be_full
+		is_jeff_full = true
+		puts "Jeff is finally full. He has eaten #{(calories_consumed / 290)} bags. His eating habits have cost the Kode with Klossy people $#{(calories_consumed / 290).to_f * 2.70}!"
+	end
+end
